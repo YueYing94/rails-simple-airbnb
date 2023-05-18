@@ -1,0 +1,47 @@
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200);">
+</div>
+
+<div class="container-top flex container">
+  <div>
+    <div class="container">
+      <div class="card" style="width: 40rem;">
+        <div class="card-body">
+          <h1><%= @flat.name %></h1>
+          <h3><%= @flat.address %></h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card" style="width: 40rem;">
+        <div class="card-body">
+          <h2>A bit more about this flat...</h2>
+          <p><%= @flat.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container card p-3">
+    <h2>Book this place</h2>
+    <form>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">From:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="12/10/2017" >
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">To:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="12/10/2017" >
+      </div>
+      <button type="submit" class="btn btn-primary">Book</button>
+    </form>
+
+    <div>
+      <h2 class="my-2">Details</h2>
+      <div class="flex">
+        <p><%= @flat.number_of_guests %> people</p>
+        <p><%= @flat.price_per_night %> €</p>
+      </div>
+    </div>
+  </div>
+
+</div>
