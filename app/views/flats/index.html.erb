@@ -1,6 +1,10 @@
 <div class="container">
   <h1>All our Flats</h1>
-  <p>All <%= @flats.count %> flats</p>
+  <% if @query %>
+  <p>You searched for <%= @query %>. We found <%= @flats.count %> flats out of our <%= Flat.count %>. </p>
+  <% else %>
+  <p>All <%= Flat.count %> flats</p>
+  <% end %>
   <ul>
     <div class="cards">
       <% @flats.each do |flat| %>
